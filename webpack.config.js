@@ -1,10 +1,34 @@
 const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const miniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const cssLoader = {
+    test: /\.css$/,
+    use: [{
+        loader:miniCssExtractPlugin.loader
+    },
+        {
+            loader: "typings-for-css-modules-loader",
+            options: {
+                importLoaders: 1,
+                modules: true,
+                namedExport: true,
+                camelCase: true,
+                localIdentName: "prechex-ui-components-" + "[local]"
+            }
+        }
+    ]
+};
+
 
 module.exports = {
     mode:'development',
+    resolve:{
+        extensions:['.tsx', '.ts', '.js']
+    },
     entry:{
-        bundle:path.resolve(__dirname, 'src/index.js')},
+        bundle:path.resolve(__dirname, './public/index.tsx')},
     output:{
         path:path.resolve(__dirname, 'dist'),
         filename:'[name].js',
@@ -24,9 +48,22 @@ module.exports = {
     module:{
         rules:[
             {
-                test:/\.scss$/,
-                use:['style-loader', 'css-loader', 'sass-loader']
-            },
+                test:/\.s[ac]ss$/i,
+                use:[ {
+                    loader:miniCssExtractPlugin.loader
+                },{
+                    loader: "typings-for-css-modules-loader",
+                    options: {
+                        importLoaders: 1,
+                        modules: true,
+                        namedExport: true,
+                        camelCase: true,
+                        sass: true,
+                        localIdentName: '[local]'
+                    }
+                },
+                { loader: "sass-loader" }
+            ]},
             {
                 test:/\.js$/,
                 exclude:/node_modules/,
@@ -38,20 +75,27 @@ module.exports = {
                 }
             },
             {
-                test:/\.ts$/,
+                test:/\.(ts|tsx)$/,
+                enforce: 'pre',
                 use:'ts-loader',
                 exclude:/node_modules/
             },
             {
                 test:/\.(png|svg|jpg|jpeg|gif)$/i,
                 type:'asset/resource'
-            }
+            },
+            cssLoader
         ]
     },
     plugins:[
         new htmlWebpackPlugin({
             filename:'index.html',
-            title:'Home Stagin'
+            title:'Home Stagin',
+            template:path.resolve(__dirname, 'public/index.html')
+        }),
+        new miniCssExtractPlugin ({
+            filename:"[name].css"
         })
+        // new ReactRefreshWebpackPlugin
     ]
 }

@@ -1,0 +1,15 @@
+@import "../../styles/colors.scss";
+@import "../../styles/variables.scss";
+
+.button{
+    width: 100px;
+    min-height: 40px;
+    color: #fff;
+    font-weight: bold;
+    background-color: $secondary-color;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    border: none;
+    outline: none;
+    font-family: $secondary-font;
+}

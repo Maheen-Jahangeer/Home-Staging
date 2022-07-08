@@ -1,0 +1,18 @@
+$baseValue: 0.25rem;
+$spacing: (
+    "mb": "margin-bottom",
+    "mt": "margin-top",
+    "ml": "margin-left",
+    "mr": "margin-right",
+    "pt": "padding-top",
+    "pb": "padding-bottom",
+    "pl": "padding-left",
+    "pr": "padding-right"
+);
+@each $name, $style in $spacing {
+    @for $i from 1 through 8 {
+        .#{$name}-spacing-0#{$i} {
+            #{$style}: $baseValue * $i !important;
+        }
+    }
+}
