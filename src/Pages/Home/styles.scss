@@ -1,23 +1,4 @@
-@import "../../styles/colors.scss";
-
-*{
-    margin: 0;
-}
-
 .wrapper{
-    background-color: $primary-color;
+    width: 100%;
     height: 100vh;
-}
-
-.home{
-    &__image{
-        width: 100%;
-        box-sizing: border-box;
-        height: 400px;
-        &__img{
-            width: 100%;
-            height: 100%;
-            object-fit:cover;
-        }
-    }
 }

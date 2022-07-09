@@ -1,13 +1,69 @@
+@import "../../styles/variables.scss";
+@import "../../styles/colors.scss";
+
 .home--carosel {
     &__image--wrapper {
         width: 100%;
         box-sizing: border-box;
-        height: 400px;
+        height: 500px;
 
         &__img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+    }
+    &__text--container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap: 15px;
+        position: relative;
+        bottom: 74%;
+        right: 27%;
+        box-sizing: border-box;
+    }
+    &__title{
+        // width: 300px;
+        font-family: $secondary-font;
+        font-size: 3rem;
+        font-weight: bolder;
+        color: white;
+        z-index: 10;
+    }
+    &__subtitle{
+        font-family: $primary-font;
+        font-size: 1.6rem;
+        font-weight: normal;
+        color: white;
+        z-index: 10;
+        // margin-right: 9%;
+        &__span{
+            color: $secondary-color;
+        }
+    }
+    &__overlay{
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 100%;
+        background: #020202;
+        opacity: 15%;
+    }
+    &__discription{
+        // width: 32%;
+        font-size: 1rem;
+        color: white;
+        line-height: 1.2;
+        font-weight: 600;
+        z-index: 10;
+        // margin-left: 5%;
+        font-family: $secondary-font;
+        &__span{
+            color: $secondary-color;
         }
     }
 }
