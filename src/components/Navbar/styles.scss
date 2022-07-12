@@ -10,6 +10,7 @@
         background-color: $primary-color;
         z-index: 10;
         padding-left: 70px;
+        // max-width: 75%;
         border-top-left-radius: 100px;
     }
 
@@ -64,7 +65,7 @@
         right: 0;
         height: auto;
         background-color: #f2f2f2;
-
+        z-index: 5;
         @media screen and(min-width:720px) {
             display: none;
         }

@@ -24,11 +24,10 @@ const HomeImage = ({ image }: any) => {
         <div className={styles.homeCaroselImageWrapper}>
             <img src={image} alt="home images" className={styles.homeCaroselImageWrapperImg} />
             <div className={styles.homeCaroselOverlay}></div>
-            <div className={styles.homeCaroselTextContainer}>
-                <p className={styles.homeCaroselTitle}>Delivering Space That Inspires</p>
+            <div className={styles.homeCaroselCardTitle}>
+            <p className={styles.homeCaroselTitle}>Delivering Space</p>
+            <p className={styles.homeCaroselTitle}> That Inspires</p>
                 <p className={styles.homeCaroselSubtitle}>Find your <span className={styles.homeCaroselSubtitleSpan}>dream home</span> </p>
-                <p className={styles.homeCaroselDiscription}>Explore different types of home and office space availale for to rented discover which is right for <span className={styles.homeCaroselDiscriptionSpan}>home</span> and <span className={styles.homeCaroselDiscriptionSpan}>bussiness</span>.</p>
-
             </div>
         </div>
     )
