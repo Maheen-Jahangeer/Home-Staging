@@ -1,0 +1,105 @@
+@import "../../styles/colors.scss";
+@import "../../styles/variables.scss";
+
+*{
+    margin: 0;
+}
+
+.agents{
+    &__wrapper{
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        position: relative;
+        @media screen and(max-width:1415px) {
+            position: static;
+            flex-direction: column;
+            background-color: $primary-color;
+        }
+    }
+    &__container{
+        width: 45%;
+        height: 600px;
+        background-color: $primary-color;
+        border-radius: 0 30px 30px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width:1415px) {
+            width: 100%;
+            border-radius:0;
+            height: auto;
+            margin-top: 20px;
+            // padding: 20px 10px;
+        }
+    }
+    &__icon{
+        &__container{
+            width: 50px;
+            height: 50px;
+            background-color: $secondary-color;
+            border-radius: 10px;
+            border-top-left-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        color: #fff;
+    }
+    &__title{
+        font-family: $tertiary-font;
+        font-size: 2.5rem;
+        font-weight: bolder;
+        line-height: 1.4;
+        color: #fff;
+        &__container{
+            width: 100%;
+            max-width: 54%;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+    &__sub--title{
+        font-family: $tertiary-font;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.9;
+        color: #d5d5d5;
+    }
+    &__button--icon{
+        &__container{
+            width: 70px;
+            display: flex;
+            justify-content: space-between;
+            &__wrapper{
+                @media screen and (max-width:1415px) {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+        }
+        font-size: 50px !important;
+        color: #fff;
+        :hover{
+            transform: scale(1.1);
+        }
+    }
+    &__mobiles{
+        &__container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: center;
+        }
+        &__title{
+            &__container{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                justify-content: space-around;
+            }
+        }
+    }
+}

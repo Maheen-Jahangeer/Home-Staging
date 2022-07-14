@@ -8,14 +8,15 @@ import flat5 from "../../../asset/images/flat5.jpg";
 import flat6 from "../../../asset/images/flat6.jpg";
 import flat7 from "../../../asset/images/flat7.jpg";
 import flat8 from "../../../asset/images/flat8.jpg";
-// import PropertiesCard from '../../components/PropertyCard';
+import PropertiesCard from '../../components/PropertyCard';
 import styles from "./styles.scss";
 import { useState } from 'react';
+import { PropertiesCardProps } from '../../components/PropertyCard/types';
 
 const PropertiesCarousel= () => {
   const carouselCountArray = [1,2,3,4];
   const array = [1,2,3,2,2,2,2,2,2]
-  const propertiesData = [
+  const propertiesData:PropertiesCardProps[] = [
     {
       image:flat1,
       price:'$ 375,000',
@@ -60,6 +61,7 @@ const PropertiesCarousel= () => {
       address:"Santa Cianta, CA 91390"
     },{
       image:flat1,
+      price:"$ 34,00",
       title:'Shadow Valley9',
       address:"Santa Cianta, CA 91390"
     },{
@@ -100,10 +102,11 @@ const PropertiesCarousel= () => {
       address:"Santa Cianta, CA 91390"
     },
   ]
+  const dataForMobileView = propertiesData.slice(0,3)
   const [initialIndex, setInitialIndex] = useState(0);
   const [incrementCount, setIncrementCount] = useState(4);
-  return (
-    <Carousel 
+  return (<>
+    <Carousel className={styles.carouselWrapper} 
     next={()=>{
       setInitialIndex(prevIndex => prevIndex+4);
       setIncrementCount(prevIndex => prevIndex+4)
@@ -126,6 +129,10 @@ const PropertiesCarousel= () => {
           })
         }
     </Carousel>
+    <div className={styles.carouselMobileContainer}>
+        <PropertiesCardContainer data={dataForMobileView} />
+    </div>
+    </>
   )
 }
 

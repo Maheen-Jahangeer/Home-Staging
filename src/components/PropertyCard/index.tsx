@@ -5,7 +5,7 @@ import BookmarkOutlinedIcon from '@mui/icons-material/BookmarkOutlined';
 import styles from './styles.scss';
 import { PropertiesCardProps } from './types';
 
-const PropertiesCard = ({image, title, 
+export const PropertiesCard = ({image, title, 
 price, address, isSaved=false }:PropertiesCardProps) => {
   console.log("Is saved", isSaved)
   return (
@@ -36,7 +36,8 @@ const PropertiesCardContainer = ({data}:any) => {
     <div className={styles.propertiesFlexWrapper}>
         {
           data.map((eachData:PropertiesCardProps)=> {
-            return <PropertiesCard image={eachData.image} title={eachData.title} address={eachData.address} price={eachData.price} isSaved={data.isSaved} />
+            console.log("Is saved for rows", eachData.isSaved)
+            return <PropertiesCard image={eachData.image} title={eachData.title} address={eachData.address} price={eachData.price} isSaved={eachData.isSaved} />
           })
         }
     </div>

@@ -1,0 +1,21 @@
+.profile--container{
+    &__wrapper{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 68%;
+        gap: 20px;
+        background-color: transparent;
+        position: absolute;
+        margin-left: 32%;
+        top: 14%;
+        @media screen and (max-width:1415px) {
+            position:static;
+            max-width: 95%;
+            margin: auto;
+            flex:1;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+}

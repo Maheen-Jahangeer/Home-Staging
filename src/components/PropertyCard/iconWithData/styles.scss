@@ -7,10 +7,16 @@
         &__icon{
             color: $secondary-color;
             font-size: 20px !important;
+            @media screen and(max-width:808px) {
+                font-size: 18px !important;
+            }
             &__label{
                 font-size: 1rem;
                 color: $secondary-color;
                 font-weight: bold;
+                @media screen and(max-width:808px) {
+                    font-size: 0.8rem;
+                }
             }
         }
     }

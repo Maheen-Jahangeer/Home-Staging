@@ -9,6 +9,8 @@ import PropertiesCard from "../../components/PropertyCard";
 import { alignProperty } from "@mui/material/styles/cssUtils";
 import PropertiesCarousel from "../../containers/PropertiesCarosel";
 import PropertiesRow from "../../containers/PropretiesRow";
+import AgentProfileImage from "../../components/AgentProfileImage";
+import AgentProfileContainer from "../../containers/AgentProfile";
 
 const Home = () => {
   return (
@@ -17,6 +19,7 @@ const Home = () => {
       <IntroductionVideo />
       <RolesContainer />
       <PropertiesRow />
+      <AgentProfileContainer />
     </div>
   )
 }

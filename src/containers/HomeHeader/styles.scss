@@ -1,0 +1,59 @@
+@import '../../styles/colors.scss';
+@import "../../styles/variables.scss";
+
+*{
+    margin: 0;
+}
+
+.hotel--header{
+    &__wrapper{
+        width: 100%;
+        height: 360px;
+        position: relative;
+    }
+    &__image{
+        &__container{
+            width: 100%;
+            height: 100%;
+        }
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__title{
+        &__container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0%;
+        }
+        font-family: $primary-font;
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-shadow: 0 0 6px $secondary-color;
+        color: #ffffff;
+        @media screen and (max-width:400px) {
+            font-size: 2.2rem;
+        }
+    }
+    &__sub--title{
+        font-family: $tertiary-font;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-shadow: 0 0 7px #16150e;
+        color: #ffffff;
+        @media screen and (max-width:400px) {
+            font-size: 1.3rem;
+        }
+        &__span{
+            color: $secondary-color;
+            text-shadow: 0 0 4px #ffffff ;
+        }
+    }
+}
