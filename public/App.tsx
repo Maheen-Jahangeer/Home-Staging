@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import FeatureHomesPage from "../src/Pages/FeaturePage";
 import Home from '../src/Pages/Home';
 import Homes from "../src/Pages/Homes";
 

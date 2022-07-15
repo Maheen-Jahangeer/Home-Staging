@@ -11,6 +11,7 @@ import flat7 from "../../../asset/images/flat7.jpg";
 import flat8 from "../../../asset/images/flat8.jpg";
 import { PropertiesCard } from '../../components/PropertyCard';
 import HomeHeader from '../../containers/HomeHeader';
+import banner from "../../../asset/images/banner.jpg";
 import styles from './styles.scss';
 import { PropertiesCardProps } from '../../components/PropertyCard/types';
 import { joinClass } from '../../..';
@@ -45,7 +46,7 @@ const Homes = () => {
       title: 'Shadow Valley3',
       address: "Santa Cianta, CA 91390",
       isSaved: true
-    },{
+    }, {
       image: flat7,
       price: '$ 375,000',
       title: 'Shadow Valley7',
@@ -161,14 +162,9 @@ const Homes = () => {
   }
   return (
     <div className={styles.homesWrapper}>
-      <HomeHeader />
+      <HomeHeader image={banner} title="Homes" />
       <div className={styles.homesContainer}>
-        <div className={styles.homesSearchContainer}>
-          <input type="text" placeholder='Search homes, places, features.....' className={styles.homesSearchInput} />
-          <ColorButton variant='contained' startIcon={<SearchOffOutlined />} color="inherit" className={styles.homesSearchButton}>
-            Search
-          </ColorButton>
-        </div>
+          <SearchContainer />
         <div className={styles.homesItemsContainer}>
           {
             propertiesData.slice(selectedIndex, dataIndex).map((data: PropertiesCardProps) => {
@@ -199,6 +195,17 @@ const Homes = () => {
             }
           </div>}
       </div>
+    </div>
+  )
+}
+
+export const SearchContainer = () => {
+  return (
+    <div className={styles.homesSearchContainer}>
+      <input type="text" placeholder='Search homes, places, features.....' className={styles.homesSearchInput} />
+      <ColorButton variant='contained' startIcon={<SearchOffOutlined />} color="inherit" className={styles.homesSearchButton}>
+        Search
+      </ColorButton>
     </div>
   )
 }

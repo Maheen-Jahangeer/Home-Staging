@@ -1,0 +1,22 @@
+.featured--homes{
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    &__container{
+        width: 100%;
+        max-width: 85%;
+        margin: auto;
+        margin-top: 100px !important;
+    }
+    &__items{
+        &__container{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            flex: 1;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+    }
+}

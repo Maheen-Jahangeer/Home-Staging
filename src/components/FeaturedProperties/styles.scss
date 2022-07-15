@@ -1,0 +1,110 @@
+@import "../../styles/variables.scss";
+@import "../../styles/colors.scss";
+
+* {
+    margin: 0;
+}
+
+.featured--property {
+    &__wrapper {
+        margin-top: 93px;
+        width: 300px;
+        height: 420px;
+        border: none;
+        box-sizing: border-box;
+        border-top-left-radius: 50px !important;
+        border-radius: 12px;
+        @media screen and (max-width:752px) {
+            width: 100%;
+        }
+    }
+
+    &__image {
+        &__container {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        border-top-left-radius: 60px !important;
+    }
+
+    &__title {
+        &__wrapper {
+            width: 100%;
+            height: 187px;
+            max-width: 83%;
+            margin: auto;
+            background-color: #fff;
+            position: relative;
+            bottom: 100px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            -webkit-box-shadow: 4px 13px 21px -4px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 4px 13px 21px -4px rgba(0, 0, 0, 0.75);
+            box-shadow: 4px 13px 21px -4px rgba(0, 0, 0, 0.75);
+        }
+        &__container{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 80%;
+            margin: auto;
+            justify-content: space-around;
+            gap: 8px;
+            padding: 14px 0;
+        }
+        font-family: $primary-font;
+        font-size: 1.6rem;
+        font-weight: bolder;
+    }
+    &__location--icon{
+        &__container{
+            display: flex;
+            justify-content:flex-start;
+        }
+        display: block;
+        box-sizing: border-box;
+        font-family: $tertiary-font;
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+    &__assets--icon{
+        &__wrapper{
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            width: 100%;
+            flex: 1;
+            flex-wrap: wrap;
+        }
+        &__container{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        &__label{
+            color: #d5d5d5;
+            font-size: 0.8rem;
+            font-family: $primary-font;
+        }
+        color: #d5d5d5;
+        font-size: 0.8rem;
+    }
+    &__seperator{
+        width: 100%;
+        height: 2px;
+        background-color: #cccccc;
+    }
+    &__price{
+        color:$secondary-color;
+        font-size: 1.5rem;
+        font-family: $secondary-color;
+    }
+}

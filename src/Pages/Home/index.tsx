@@ -11,16 +11,20 @@ import PropertiesCarousel from "../../containers/PropertiesCarosel";
 import PropertiesRow from "../../containers/PropretiesRow";
 import AgentProfileImage from "../../components/AgentProfileImage";
 import AgentProfileContainer from "../../containers/AgentProfile";
+import FeaturePropertiesContainer from "../../containers/FeaturePropertiesContainer";
+import CustomerProfile from "../../components/CustomerProfile";
 
 const Home = () => {
   return (
-    <div className={styles.wrapper}>
-      <HomeContainer />
-      <IntroductionVideo />
-      <RolesContainer />
-      <PropertiesRow />
-      <AgentProfileContainer />
-    </div>
+    // <div className={styles.wrapper}>
+    //   <HomeContainer />
+    //   {/* <IntroductionVideo /> */}
+    //   <RolesContainer />
+    //   <PropertiesRow />
+    //   <AgentProfileContainer />
+    //   <FeaturePropertiesContainer />
+    // </div>
+    <CustomerProfile />
   )
 }
 

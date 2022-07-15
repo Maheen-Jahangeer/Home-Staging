@@ -10,13 +10,16 @@
         font-size: 2.5rem;
         font-weight: bold;
         line-height: 1.4;
-        max-width: 63%;
+        // max-width: 63%;
         &__wrapper{
             display: flex;
             justify-content: space-between;
             width: 100%;
-            max-width: 95%;
-            margin: auto;
+            flex:1;
+            flex-wrap: wrap;
+            @media screen and (max-width:589px) {
+                justify-content: center;
+            }
         }
         &__container{
             display: flex;
@@ -26,6 +29,10 @@
             width: 100%;
             gap: 30px;
             max-width: 500px;
+            @media screen and (max-width:589px) {
+                justify-content: center;
+                align-items: center;
+            }
         }
     }
     &__sub--title{
@@ -34,5 +41,10 @@
         font-family: $secondary-font;
         line-height: 1.4;
         margin-bottom: 60px;
+    }
+    &__button{
+        @media screen and (max-width:589px) {
+            display: none;
+        }
     }
 }
