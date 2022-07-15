@@ -1,0 +1,45 @@
+@import "../../styles/variables.scss";
+
+.link--item {
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    &__labels{
+        font-size: 1rem;
+        color: #222d42af;
+        font-family: $tertiary-font;
+    }
+}
+
+.footer--list{
+    &__wrapper{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    &__seperator{
+        height: 2px;
+        width: 100%;
+        background-color: #d5d5d5;
+    }
+    &__title{
+        font-size: 1.7rem;
+        font-family: $primary-font;
+        color: #222d42af;
+        font-weight: bold;
+    }
+    &__input{
+        font-size: 1.2rem;
+        border: 1px solid #d6d6d6;
+        font-family: $primary-font;
+        min-height: 30px;
+        padding-left: 12px;
+        &__container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+}
