@@ -1,0 +1,15 @@
+.footer--items {
+    &__wrapper {
+        min-height: 550px;
+        background-image: url("../../../asset/images/footer.jpg");
+        background-size: cover;
+        padding: 10px;
+    }
+
+    &__container {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+}

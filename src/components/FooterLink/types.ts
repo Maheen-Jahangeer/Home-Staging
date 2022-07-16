@@ -5,5 +5,5 @@ export interface LinkItemProps {
 
 export interface FooterOptionProps {
     heading:String,
-    LinkItems:LinkItemProps[]
+    LinkItems?:LinkItemProps[]
 }

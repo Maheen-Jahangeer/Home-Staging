@@ -37,4 +37,4 @@ const IntroductionVideo = () => {
     )
 }
 
-export default IntroductionVideo
+export default IntroductionVideo;

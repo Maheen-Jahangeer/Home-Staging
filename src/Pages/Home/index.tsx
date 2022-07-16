@@ -13,18 +13,20 @@ import AgentProfileImage from "../../components/AgentProfileImage";
 import AgentProfileContainer from "../../containers/AgentProfile";
 import FeaturePropertiesContainer from "../../containers/FeaturePropertiesContainer";
 import CustomerProfile from "../../components/CustomerProfile";
+import FooterContainer from "../../containers/FooterContainer";
 
 const Home = () => {
   return (
-    // <div className={styles.wrapper}>
-    //   <HomeContainer />
-    //   {/* <IntroductionVideo /> */}
-    //   <RolesContainer />
-    //   <PropertiesRow />
-    //   <AgentProfileContainer />
-    //   <FeaturePropertiesContainer />
-    // </div>
-    <CustomerProfile />
+    <div className={styles.wrapper}>
+      <HomeContainer />
+      {/* <IntroductionVideo /> */}
+      <RolesContainer />
+      <PropertiesRow />
+      <AgentProfileContainer />
+      <FeaturePropertiesContainer />
+      <FooterContainer />
+    </div>
+    // <CustomerProfile />
   )
 }
 

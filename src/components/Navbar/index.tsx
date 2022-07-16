@@ -7,15 +7,19 @@ import { Backdrop, SvgIcon } from "@mui/material";
 import { useState } from "react";
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
-
+export const MainIcon = () => {
+  return (
+    <div className={styles.navbarIcon}>
+    <img src={homeIcon} alt="icon" className={styles.navbarIconImg} />
+  </div>
+  )
+}
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
       <div className={styles.navbarWrapper}>
-        <div className={styles.navbarIcon}>
-          <img src={homeIcon} alt="icon" className={styles.navbarIconImg} />
-        </div>
+        <MainIcon />
         <div className={styles.navbarMenuIcon} onClick={()=> setMenuOpen(true)}>
           <ListOutlinedIcon color="inherit" fontSize="large" />
         </div>

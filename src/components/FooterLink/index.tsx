@@ -4,13 +4,13 @@ import { FooterOptionProps, LinkItemProps } from './types'
 import styles from './styles.scss'
 import Button from '../Button'
 
-const LinkList = (data:any) => {
+const LinkList = ({LinkItems}:FooterOptionProps) => {
     return(
-    <div className={styles.LinkItemWrapper}>
+    <div className={styles.linkItemWrapper}>
         {
-            data.map((singleLink:LinkItemProps)=> {
+            LinkItems?.map((singleLink:LinkItemProps)=> {
                 return( 
-                <Link to={singleLink.linkUrl}>
+                <Link to={singleLink.linkUrl} className={styles.linkItemLabels}>
                     {singleLink.title}
                 </Link>)
             })
@@ -25,7 +25,7 @@ const FooterList = ({heading, LinkItems}:FooterOptionProps) => {
         <div className={styles.footerListSeperator}></div>
         {
             heading !== "Subscriber" ? 
-            <LinkList data={LinkItems} /> 
+            <LinkList LinkItems={LinkItems} heading={undefined} /> 
             :
             <div className={styles.footerListInputContainer}>
                 <input type="text" placeholder='Email address' className={styles.footerListInput} />
