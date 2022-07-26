@@ -1,7 +1,7 @@
 .footer--items {
     &__wrapper {
         min-height: 550px;
-        background-image: url("../../../asset/images/footer.jpg");
+        background-image: url("../../../asset/images/footer2.jpg");
         background-size: cover;
         padding: 10px;
     }
@@ -11,5 +11,7 @@
         display: flex;
         justify-content: space-around;
         width: 100%;
+        flex: 1;
+        flex-wrap: wrap;
     }
 }

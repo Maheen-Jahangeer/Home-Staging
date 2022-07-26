@@ -5,3 +5,4 @@ export const footerListSeperator: string;
 export const footerListTitle: string;
 export const footerListInput: string;
 export const footerListInputContainer: string;
+export const footerListButton: string;

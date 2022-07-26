@@ -49,11 +49,11 @@ const FooterContainer = () => {
             {
               title:"Privacy policy",
               linkUrl:"#"
+            },{
+              title:"Terms ",
+              linkUrl:"#"
             },
             {
-              title:"Terms and conditions",
-              linkUrl:"#"
-            },{
               title:"Lander news",
               linkUrl:"#"
             },{
@@ -69,7 +69,6 @@ const FooterContainer = () => {
   return (
     <div className={styles.footerItemsWrapper}>
       <div className={styles.footerItemsContainer}>
-        <MainIcon />
         {
           footerOptions.map((footerOption)=> {
             return (

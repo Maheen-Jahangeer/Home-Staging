@@ -29,7 +29,7 @@ const FooterList = ({heading, LinkItems}:FooterOptionProps) => {
             :
             <div className={styles.footerListInputContainer}>
                 <input type="text" placeholder='Email address' className={styles.footerListInput} />
-                <Button buttonLabel='Subscribe' />
+                <Button buttonLabel='Subscribe' className={styles.footerListButton} />
             </div>
             }
     </div>

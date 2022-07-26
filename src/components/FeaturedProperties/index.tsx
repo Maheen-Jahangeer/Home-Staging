@@ -13,6 +13,15 @@ const IconWithLabel = ({ title, Icon }: any) => {
   )
 }
 
+export const AddrssIconWithLabel = (address:any) => {
+  return (
+    <div className={styles.featuredPropertyLocationIconContainer}>
+    <LocationOnOutlinedIcon />
+    <p className={styles.featuredPropertyLocationIcon}>{address}</p>
+    </div>
+  )
+}
+
 const FeaturedPropertiesCard = ({imageUrl, title, address, bathCount, bedRoomCount, totalSqureFit}:FeaturedPropertiesProps) => {
   return (
     <div className={styles.featuredPropertyWrapper}>
@@ -22,10 +31,7 @@ const FeaturedPropertiesCard = ({imageUrl, title, address, bathCount, bedRoomCou
       <div className={styles.featuredPropertyTitleWrapper}>
         <div className={styles.featuredPropertyTitleContainer}>
           <p className={styles.featuredPropertyTitle}>{title}</p>
-          <div className={styles.featuredPropertyLocationIconContainer}>
-            <LocationOnOutlinedIcon />
-            <p className={styles.featuredPropertyLocationIcon}>{address}</p>
-            </div>
+            <AddrssIconWithLabel address={address} /> 
             <div className={styles.featuredPropertySeperator}></div>
             <div className={styles.featuredPropertyAssetsIconWrapper}>
               <IconWithLabel title={`${bathCount} Baths`} Icon={Bathtub} />
