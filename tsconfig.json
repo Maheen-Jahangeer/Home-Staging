@@ -15,6 +15,6 @@
     "sourceMap": true,
     "target": "es5"
   },
-  "include": ["/public", "/src", "declaration.d.ts"],
+  "include": ["public", "src", "declaration.d.ts"],
   "exclude": ["node_modules"]
 }

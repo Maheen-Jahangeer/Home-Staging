@@ -1,0 +1,12 @@
+.carousel{
+    &__wrapper{
+        @media screen and (max-width:1015px) {
+            display: none;
+        }
+    }
+    &__mobile--container{
+        @media screen and(min-width:1015px) {
+            display: none;
+        }
+    }
+}

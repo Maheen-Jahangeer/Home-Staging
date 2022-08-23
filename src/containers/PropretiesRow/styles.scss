@@ -1,0 +1,51 @@
+@import "../../styles/variables.scss";
+
+*{
+    margin: 0;
+}
+
+.properties--row{
+    &__title{
+        font-family: $tertiary-font;
+        font-size: 2.5rem;
+        font-weight: bold;
+        line-height: 1.4;
+        // max-width: 63%;
+        &__wrapper{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 95%;
+            margin: auto;
+            flex-wrap: wrap;
+            @media screen and (max-width:589px) {
+                justify-content: center;
+            }
+        }
+        &__container{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            gap: 30px;
+            max-width: 500px;
+            @media screen and (max-width:589px) {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+    &__sub--title{
+        font-size: 1.2rem;
+        color: #7c7575;
+        font-family: $secondary-font;
+        line-height: 1.4;
+        margin-bottom: 60px;
+    }
+    &__button{
+        @media screen and (max-width:589px) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@import '../../styles/variables.scss';
+@import '../../styles/colors.scss';
+
+.featured--homes{
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    &__container{
+        width: 100%;
+        max-width: 85%;
+        margin: auto;
+        margin-top: 100px !important;
+    }
+    &__items{
+        &__container{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            flex: 1;
+            flex-wrap: wrap;
+            gap: 130px;
+        }
+    }
+    &__button{
+        &__disabled{
+            cursor:not-allowed;
+        }
+        &__container{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px !important;
+            width: 100%;
+            @media screen and (max-width:857px) {
+                gap: 30px;
+                flex-direction: column;
+            }
+        }
+        min-height: 60px !important;
+        min-width: 133px !important;
+    }
+    &__search--button{
+        background-color: $primary-color;
+        border-radius: 10px !important;
+        min-height: 50px;
+        color: #ffffff;
+        @media screen and(max-width:808px) {
+            left: 50%;
+            transform: translatex(-50%);
+        }
+    }
+}

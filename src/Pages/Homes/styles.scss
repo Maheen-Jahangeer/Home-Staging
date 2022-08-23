@@ -1,0 +1,75 @@
+@import "../../styles/variables.scss";
+@import "../../styles/colors.scss";
+
+.homes{
+    &__wrapper{
+        width: 100%;
+        height: auto;
+        background-color: #f6f6f6;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+    &__container{
+        width: 100%;
+        max-width: 85%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        padding: 30px 0;
+    }
+    &__search{
+        &__container{
+            display: flex;
+            gap: 30px;
+            @media screen and(max-width:808px) {
+                flex: 1;
+                flex-wrap: wrap;
+            }
+        }
+        &__input{
+            width: 100%;
+            border-radius: 6px;
+            min-height: 50px;
+            padding-left: 10px;
+            font-size: 1.2rem;
+            font-family: $tertiary-font;
+            border: 1px solid #d5d5d5;
+        }
+        &__button{
+            background-color: $primary-color;
+            border-radius: 10px !important;
+            min-height: 50px;
+            color: #ffffff;
+            @media screen and(max-width:808px) {
+                left: 50%;
+                transform: translatex(-50%);
+            }
+        }
+    }
+    &__items{
+        &__container{
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            width: 100%;
+            flex: 1;
+            flex-wrap: wrap;
+        }
+    }
+    &__button{
+        &__container{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px !important;
+            width: 100%;
+            @media screen and (max-width:857px) {
+                gap: 30px;
+                flex-direction: column;
+            }
+        }
+        min-height: 60px !important;
+        min-width: 133px !important;
+    }
+}
