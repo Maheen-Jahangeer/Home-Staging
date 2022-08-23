@@ -17,7 +17,7 @@ import { PropertiesCardProps } from '../../components/PropertyCard/types';
 import { joinClass } from '../../..';
 import { useState } from 'react';
 
-const ColorButton = styled(Button)<ButtonProps>(({ theme }) => (
+export const ColorButton = styled(Button)<ButtonProps>(({ theme }) => (
   {
     color: theme.palette.getContrastText("#222d42"),
     backgroundColor: "#222d42",

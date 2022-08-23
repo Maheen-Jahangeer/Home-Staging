@@ -1,9 +1,16 @@
 import { FacebookOutlined, Instagram, LinkedIn,  } from '@mui/icons-material';
+import { useState } from 'react';
 import profile from '../../../asset/images/profile.jpg';
 import styles from './styles.scss';
 import { ProfileProps } from './types';
 
 const AgentProfileImage = ({name}:ProfileProps) => {
+    const names = () => {
+        console.log("Clicked here and chnges values")
+    }
+    const buttonHandler = () => {
+        console.log("Clicked for handler button and response is stored")
+    }
     return (
         <div className={styles.agentProfile}>
             <div className={styles.agentProfileImageContainer}><img src={profile} alt="profile picture" className={styles.agentProfileImage} /></div>

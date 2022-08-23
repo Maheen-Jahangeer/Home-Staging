@@ -13,7 +13,7 @@ const IconWithLabel = ({ title, Icon }: any) => {
   )
 }
 
-export const AddrssIconWithLabel = (address:any) => {
+export const AddrssIconWithLabel = ({address}:any) => {
   return (
     <div className={styles.featuredPropertyLocationIconContainer}>
     <LocationOnOutlinedIcon />

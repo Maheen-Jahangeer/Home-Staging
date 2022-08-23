@@ -3,12 +3,13 @@ import FeatureHomesPage from "../src/Pages/FeaturePage";
 import Home from '../src/Pages/Home';
 import RegisterProperty from "../src/Pages/RegisterPrope";
 import Homes from "../src/Pages/Homes";
+import BookNow from "../src/Pages/BookNow";
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<RegisterProperty />} />
+        <Route path="/" element={<BookNow />} />
         </Routes>
     </Router>
   )
